@@ -4,6 +4,7 @@ int Matrix(int, int);
 int main()
 {
     int n, m;
+    std::cout << "Enter rows and cols of the matrix: ";
     std::cin >> n >> m;
     std::cout << std::endl;
     Matrix(n, m);
