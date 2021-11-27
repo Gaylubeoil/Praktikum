@@ -1,14 +1,13 @@
 #include <iostream>
 
-int n, f;
-void Array(int array[100]) {
+void Array(int array[], int n) {
     for (int i = 0; i < n; i++)
     {
         std::cout << "Enter the array's " << i << " element: ";
         std::cin >> array[i];
     }
 }
-void FilterN(int array[100]) {
+void FilterN(int array[], int n, int f) {
     int counter = 0;
     std::cout << "index: ";
     for (int i = 0; i < n; i++)
@@ -24,6 +23,7 @@ void FilterN(int array[100]) {
 
 int main()
 {   
+    int n, f;
     std::cout << "Enter array num of elements: ";
     std::cin >> n;
     std::cout << "Enter F: ";
@@ -33,8 +33,8 @@ int main()
         std::cin >> n;
     }
     int array[100] = {};
-    Array(array);
-    FilterN(array);
+    Array(array, n, f);
+    FilterN(array, n, f);
 
     return 0;
 }
