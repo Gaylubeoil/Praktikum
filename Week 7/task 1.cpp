@@ -1,7 +1,7 @@
 
 #include <iostream>
-int n;
-void ArrayMaxMinIndex(int array[99]) { 
+void ArrayMaxMinIndex(int array[], int n) {
+    
     for (int i = 0; i < n; i++) {
         std::cout << "Enter the array's " << i << " element: ";
         std::cin >> array[i];
@@ -32,13 +32,14 @@ void ArrayMaxMinIndex(int array[99]) {
 }
 int main()
 {
+    int n;
     std::cin >> n;
     while (n < 2 || n > 100)
     {
         std::cin >> n;
     }
     int array[99] = {};
-    ArrayMaxMinIndex(array);
+    ArrayMaxMinIndex(array, n);   
 }
 /*
 ДНП, в която се въвежда число n[2;100] и масив от n числа. Използвайки функции да се изведат най-голямото и най-малкото число от редицата.
