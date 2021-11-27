@@ -4,14 +4,14 @@
 #include <iostream>
 using namespace std;
 int n;
-void Array(int array[100]) {
+void Array(int array[], int n) {
     for (int i = 0; i < n; i++)
     {
         std::cout << "Enter the array's " << i << " element: ";
         std::cin >> array[i];
     }
 }
-void Filter(int array[100]) {
+void Filter(int array[], int n) {
     int sum = 0;
     for (int i = 0; i < n; i++)
     {
@@ -32,6 +32,7 @@ void Filter(int array[100]) {
 
 int main()
 {
+    int n;
     std::cout << "Enter the array's number of elements: ";
     std::cin >> n;
     while (n < 1 || n > 100)
@@ -39,8 +40,8 @@ int main()
         std::cin >> n;
     }
     int array[100] = {};
-    Array(array);
-    Filter(array);
+    Array(array, n);
+    Filter(array, n);
     return 0;
 }
 /*
