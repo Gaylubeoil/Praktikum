@@ -1,26 +1,25 @@
 #include <iostream>
-int n;
-int c;
-void Array(int array[100]) {
+void Array(char array[], int n) {
     for (int i = 0; i < n; i++)
     {
         std::cout << "Enter the array's " << i << " element: ";
         std::cin >> array[i];
     }
 }
-void FilterC(int array[100]) {
-    for (int i = 0; i < n; i++)
+void FilterC(char array[], char n, char c) {
+    for (char i = 0; i < n; i++)
     {
         if (c == array[i])
         {
-            array[i] = 0;
+            array[i] = '0';
         }
         std::cout << array[i] << std::endl;
     }
 }
-
 int main()
 {
+    int n;
+    char c;
     std::cout << "Enter num of elements of the array: ";
     std::cin >> n;
     std::cout << "Enter C: ";
@@ -29,10 +28,9 @@ int main()
     {
         std::cin >> n;
     }
-    int array[100] = {};
-    Array(array);
-    FilterC(array);
-
+    char array[100] = {};
+    Array(array, n);
+    FilterC(array, n, c);
     return 0;
 }
 /*
