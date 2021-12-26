@@ -10,15 +10,6 @@ void cinarr(char* arr, const int* size)
 	}
 	arr[i] = '\0';
 }
-
-void ass(char* arr, const int* size) {
-	for (size_t i = 0; i < *size; i++)
-	{
-		std::cout << arr[i];
-	}
-	std::cout << std::endl;
-}
-
 void letterTransformer(char* arr) {
 	int i = 0;
 	while (arr[i] != '\0')
